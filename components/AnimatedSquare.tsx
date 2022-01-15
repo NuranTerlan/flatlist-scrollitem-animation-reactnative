@@ -44,6 +44,7 @@ const AnimatedSquare = () => {
 						borderRadius: opacity.interpolate({
 							inputRange: [0.3, 1],
 							outputRange: [SQUARE_SIZE / 6, SQUARE_SIZE / 2],
+							extrapolateLeft: "clamp",
 						}),
 						opacity,
 						transform: [
@@ -52,6 +53,7 @@ const AnimatedSquare = () => {
 								rotate: opacity.interpolate({
 									inputRange: [0.3, 1],
 									outputRange: ["0deg", "45deg"],
+									extrapolateLeft: "clamp",
 								}),
 							},
 						],
